@@ -16,7 +16,7 @@ const germaniaOne = Germania_One({
 export const metadata: Metadata = {
   title: "Wunderwerks | Bavarian Craft Brewery in Fort Wayne",
   description:
-    "Bavarian-style lagers on Wells Street, Fort Wayne. Two brewers, low-maintenance taproom, always compliant.",
+    "Grand Opening September 2026. Neighborhood brewery on Wells Street, Fort Wayne — clean lagers and a welcoming taproom run by two brewers.",
   metadataBase: new URL("https://wunderwerks.vercel.app"),
   icons: {
     icon: "/favicon.svg",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wunderwerks | Bavarian Craft Brewery in Fort Wayne",
     description:
-      "Bavarian-style lagers on Wells Street, Fort Wayne. Two brewers, low-maintenance taproom, always compliant.",
+      "Grand Opening September 2026. Neighborhood brewery on Wells Street, Fort Wayne — clean lagers and a welcoming taproom run by two brewers.",
     url: "https://wunderwerks.vercel.app",
     siteName: "Wunderwerks",
     locale: "en_US",

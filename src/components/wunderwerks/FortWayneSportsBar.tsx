@@ -4,12 +4,13 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Timer } from "lucide-react";
 import {
+  getBroadcastStartTime,
   getCountdownParts,
-  getNextAwayGame,
-  getRallyStartTime,
-} from "@/lib/tinCapsSchedule";
+  getNextBroadcast,
+  getTeamById,
+} from "@/lib/fortWayne";
 
-export function TinCapsCountdown() {
+export function FortWayneSportsBar() {
   const reduceMotion = useReducedMotion();
   const [now, setNow] = useState(() => new Date());
   const [pulseKey, setPulseKey] = useState(0);
@@ -23,8 +24,9 @@ export function TinCapsCountdown() {
     return () => window.clearInterval(interval);
   }, []);
 
-  const nextGame = getNextAwayGame(now);
-  const target = nextGame ? getRallyStartTime(nextGame) : null;
+  const nextBroadcast = getNextBroadcast(now);
+  const team = nextBroadcast ? getTeamById(nextBroadcast.teamId) : null;
+  const target = nextBroadcast ? getBroadcastStartTime(nextBroadcast) : null;
   const countdown = target ? getCountdownParts(target, now) : null;
 
   return (
@@ -32,12 +34,12 @@ export function TinCapsCountdown() {
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-2 px-6 py-3 text-sand sm:flex-row sm:items-center sm:justify-between md:px-10">
         <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-brass">
           <Timer className="h-4 w-4" />
-          Wunder-Caps Away Rally
+          Fort Wayne Sports
         </div>
 
-        {nextGame && countdown ? (
+        {nextBroadcast && team && countdown ? (
           <p className="text-sm text-sand/85 md:text-base">
-            Next away game:{" "}
+            Next {team.nickname} watch party:{" "}
             <motion.span
               key={pulseKey}
               initial={reduceMotion ? false : { scale: 1.08, opacity: 0.7 }}
@@ -47,15 +49,16 @@ export function TinCapsCountdown() {
             >
               {countdown.hours}h {countdown.minutes}m
             </motion.span>{" "}
-            until Thirsty Thursday rally — $1 off Stein fills.
+            until taproom broadcast night.
             <span className="mt-1 block text-xs text-sand/50 sm:ml-2 sm:mt-0 sm:inline">
-              @ {nextGame.opponent}
+              {team.sport} · {nextBroadcast.isAway ? "@" : "vs"}{" "}
+              {nextBroadcast.opponent}
             </span>
           </p>
         ) : (
           <p className="text-sm text-sand/70">
-            Away-game schedule loading. Check back for the next Wunder-Caps
-            rally.
+            TinCaps, Komets, and Fort Wayne FC schedules loading — check back
+            for the next downtown watch party.
           </p>
         )}
       </div>

@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
-import { Camera, MapPin, Clock } from "lucide-react";
+import { Camera, CalendarDays, Clock, MapPin } from "lucide-react";
 import type { ComplianceMode, TapFilter } from "@/lib/types";
 import { ComplianceToggle } from "./ComplianceToggle";
 import { ComplianceMenu } from "./ComplianceMenu";
@@ -12,7 +12,9 @@ import { HeroSection } from "./HeroSection";
 import { MobileMenu } from "./MobileMenu";
 import { StorySection } from "./StorySection";
 import { TapList } from "./TapList";
-import { TinCapsCountdown } from "./TinCapsCountdown";
+import { FortWayneSection } from "./FortWayneSection";
+import { FortWayneSportsBar } from "./FortWayneSportsBar";
+import { GrandOpeningBanner } from "./GrandOpeningBanner";
 
 export function WunderwerksLanding() {
   const reduceMotion = useReducedMotion();
@@ -35,6 +37,8 @@ export function WunderwerksLanding() {
         complianceMode={complianceMode}
         onComplianceChange={setComplianceMode}
       />
+
+      <GrandOpeningBanner />
 
       <MobileMenu
         open={mobileMenuOpen}
@@ -65,6 +69,7 @@ export function WunderwerksLanding() {
           complianceMode={complianceMode}
         />
         <EventsSection complianceMode={complianceMode} />
+        <FortWayneSection complianceMode={complianceMode} />
       </main>
 
       <footer className="relative z-10 border-t border-charcoal/10 bg-charcoal px-6 py-12 text-sand md:px-10">
@@ -78,8 +83,12 @@ export function WunderwerksLanding() {
               <span>1515 Wells Street, Fort Wayne, IN</span>
             </div>
             <div className="mt-2 flex items-start gap-2 text-sm text-sand/70">
+              <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
+              <span>Grand Opening · September 2026</span>
+            </div>
+            <div className="mt-2 flex items-start gap-2 text-sm text-sand/70">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
-              <span>Taproom Thu–Sun · 4 PM – 11 PM</span>
+              <span>Taproom hours posted at opening · Thu–Sun planned</span>
             </div>
           </div>
 
@@ -102,7 +111,7 @@ export function WunderwerksLanding() {
         />
       </div>
 
-      <TinCapsCountdown />
+      <FortWayneSportsBar />
     </div>
   );
 }

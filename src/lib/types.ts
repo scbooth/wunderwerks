@@ -4,6 +4,8 @@ export type TapFilter = "all" | "light" | "dark" | "seasonal";
 
 export type BeerTag = "light" | "dark" | "seasonal";
 
+export type FortWayneTeamId = "tincaps" | "komets" | "fwfc";
+
 export interface Beer {
   id: string;
   name: string;
@@ -33,9 +35,26 @@ export interface BreweryEvent {
   hook: string;
 }
 
-export interface TinCapsGame {
+export interface FortWayneTeam {
+  id: FortWayneTeamId;
+  name: string;
+  nickname: string;
+  sport: string;
+  league: string;
+  venue: string;
+  taproomHook: string;
+}
+
+export interface LocalHighlight {
   id: string;
+  name: string;
+  description: string;
+}
+
+export interface SportsBroadcast {
+  id: string;
+  teamId: FortWayneTeamId;
   date: string;
   opponent: string;
-  isHome: boolean;
+  isAway: boolean;
 }

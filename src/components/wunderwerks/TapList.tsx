@@ -11,7 +11,6 @@ import { SectionHeading, SectionShell } from "./ui/SectionHeading";
 const filters: { id: TapFilter; label: string }[] = [
   { id: "all", label: "All" },
   { id: "light", label: "Light & Crisp" },
-  { id: "dark", label: "Dark & Malty" },
   { id: "seasonal", label: "Seasonal" },
 ];
 
@@ -53,7 +52,7 @@ export function TapList({
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           title="On Tap Today"
-          subtitle="Clean Lagers · Plain English · Two Brewers Behind the Bar"
+          subtitle="Slaughterhouse Hefe · Cleaver Amber · Compliance Pilsner"
         />
 
         <div className="mt-8 flex flex-wrap gap-3">

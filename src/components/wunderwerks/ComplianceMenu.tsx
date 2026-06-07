@@ -11,7 +11,8 @@ import {
 } from "lucide-react";
 import {
   complianceMenu,
-  deliveryBlurb,
+  corridorBlurb,
+  corridorIntro,
   deliveryPartners,
 } from "@/lib/complianceMenu";
 import type { ComplianceItem, ComplianceMode } from "@/lib/types";
@@ -35,14 +36,12 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
     <SectionShell id="compliance" className="bg-white">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          title="The Compliance Board"
-          subtitle="Indiana Title 7.1 · Low-Prep, High-Quality, Two-Brewer Friendly"
+          title="The Wells Street Corridor"
+          subtitle="Indiana Code Title 7.1 · House Menu & Local Partnerships"
         />
 
-        <p className="mx-auto mt-6 max-w-3xl text-center text-base leading-7 text-charcoal/70">
-          We sell beer by the glass, so the law asks for a little food on hand.
-          We keep it simple — one kettle, one steam drawer, and zero kitchen
-          staff.
+        <p className="mx-auto mt-6 max-w-3xl text-center text-base leading-8 text-charcoal/75 md:text-lg">
+          {corridorIntro}
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -57,11 +56,11 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
                 whileHover={reduceMotion ? undefined : { y: -4 }}
-                className={`relative overflow-hidden rounded-sm border border-charcoal/10 bg-sand p-6 shadow-sm transition-shadow ${
+                className={`relative overflow-hidden rounded-sm border border-charcoal/15 bg-sand p-6 shadow-sm transition-shadow ${
                   emphasized ? "brass-glow ring-1 ring-brass/30" : ""
                 }`}
               >
-                <div className="absolute inset-x-0 top-0 h-1 bg-brass" />
+                <div className="absolute inset-x-0 top-0 h-px bg-brass" />
                 <div className="mb-4 flex items-center justify-between">
                   <span className="text-[11px] uppercase tracking-[0.22em] text-brass">
                     {item.category}
@@ -84,7 +83,7 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`mt-16 rounded-sm border border-charcoal/10 bg-charcoal p-8 text-sand md:p-10 ${
+          className={`mt-16 rounded-sm border border-brass/20 bg-charcoal p-8 text-sand md:p-10 ${
             emphasized ? "brass-glow" : ""
           }`}
         >
@@ -97,10 +96,10 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
                 </span>
               </div>
               <h3 className="mt-3 font-[family-name:var(--font-germania)] text-3xl">
-                Order to Your Bar Stool
+                Eat Local, Stay Seated
               </h3>
               <p className="mt-4 text-sm leading-7 text-sand/75 md:text-base">
-                {deliveryBlurb}
+                {corridorBlurb}
               </p>
             </div>
             <UtensilsCrossed
@@ -113,7 +112,7 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
             {deliveryPartners.map((partner) => (
               <div
                 key={partner.id}
-                className="rounded-sm border border-sand/10 bg-sand/5 p-4"
+                className="rounded-sm border border-sand/15 bg-sand/5 p-4"
               >
                 <p className="font-medium text-sand">{partner.name}</p>
                 <p className="mt-1 text-sm text-sand/60">{partner.specialty}</p>

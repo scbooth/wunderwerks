@@ -2,27 +2,27 @@ import type { BreweryEvent } from "./types";
 
 export const events: BreweryEvent[] = [
   {
-    id: "slab-and-stein",
-    title: "Slab & Stein BYO Vinyl Night",
-    schedule: "Every Tuesday",
-    hook: "We set up a turntable at the bar. Bring your favorite records, sign the clipboard, and we spin them over the taproom speakers. No host, no prep — just good beer and community-curated playlists.",
-  },
-  {
     id: "tabletop-and-taps",
     title: "Tabletop & Taps",
     schedule: "Every Wednesday",
-    hook: "Skip the loud trivia hosts. Our Haus Board Game Shelf is stocked with premium indie favorites — Carcassonne, Ticket to Ride, Catan, and more. Grab friends, grab a table, buy pints, and play. It runs itself.",
+    hook: "Bring your favorite board games or pull one from our curated house shelf of indie strategy games. A mid-week staple for those who appreciate good strategy, quiet competition, and fresh lager.",
   },
   {
-    id: "wunder-caps-away",
-    title: "Wunder-Caps Away Game Rallies",
-    schedule: "Thirsty Thursday · TinCaps Away Games",
-    hook: "When the Fort Wayne TinCaps are on the road, we pipe the live audio into the taproom, put the game on, and take $1 off cold Stein fills. Downtown baseball energy with zero extra labor from us.",
+    id: "fort-wayne-sports",
+    title: "Fort Wayne Sports Broadcasts",
+    schedule: "Thirsty Thursday · TinCaps, Komets & Fort Wayne FC",
+    hook: "When our hometown teams are on — TinCaps baseball at Parkview Field, Komets hockey at the Coliseum, or Fort Wayne FC at Lutheran Health Field — we tune in at the taproom. Away-day radio feeds, home-game screens, Steins raised for Fort Wayne.",
   },
   {
-    id: "food-truck-takeover",
-    title: "Wells Street Food Truck Takeover",
+    id: "slab-and-stein",
+    title: "Slab & Stein BYO Vinyl Night",
+    schedule: "Every Saturday",
+    hook: "A night dedicated to analog sound and local collectors. Bring your favorite vinyl records, sign up on our clipboard at the bar, and let us play a side of your album over the house speakers while you enjoy a fresh pour.",
+  },
+  {
+    id: "food-truck-spotlights",
+    title: "Food Truck Spotlights",
     schedule: "Friday & Saturday Nights",
-    hook: "Local food trucks roll into our industrial courtyard. They cook, serve, and clean up — we pour clean lagers. Real food, real easy for a two-person crew.",
+    hook: "We're brewers, not chefs. Every Friday and Saturday night, we share our industrial courtyard with Fort Wayne's best local food trucks to bring you a rotating lineup of great street food paired with our lagers.",
   },
 ];

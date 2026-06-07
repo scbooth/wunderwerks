@@ -3,7 +3,7 @@ import type { Beer } from "./types";
 export const beers: Beer[] = [
   {
     id: "slaughterhouse-hefe",
-    name: "Slaughterhouse Hefe (Hefeweizen)",
+    name: "Slaughterhouse Hefe",
     abv: 5.4,
     description:
       "Cloudy, unfiltered wheat beer with soft banana and clove notes. Easy-drinking and perfect in a tall glass.",
@@ -27,14 +27,5 @@ export const beers: Beer[] = [
       "Crisp, bright, and bone-dry. Our go-to pint when you want something cold, clean, and uncomplicated.",
     glassware: "Pilsner glass",
     tag: "light",
-  },
-  {
-    id: "double-bock-down",
-    name: "Double Bock Down",
-    abv: 7.8,
-    description:
-      "Rich dark lager with caramel, dark bread, and a slow, warming finish. Sip slow — it's a heavy hitter.",
-    glassware: "Dimpled mug",
-    tag: "dark",
   },
 ];

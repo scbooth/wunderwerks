@@ -47,7 +47,7 @@ interface SectionShellProps {
 
 export function SectionShell({ id, children, className = "" }: SectionShellProps) {
   return (
-    <section id={id} className={`scroll-mt-24 px-6 py-20 md:px-10 lg:px-16 ${className}`}>
+    <section id={id} className={`scroll-mt-32 px-6 py-20 md:px-10 lg:px-16 ${className}`}>
       {children}
     </section>
   );

@@ -26,7 +26,7 @@ export function EventsSection({ complianceMode }: EventsSectionProps) {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           title="Weekly Hangouts"
-          subtitle="Self-Sustaining Taproom Nights · Zero Extra Labor"
+          subtitle="Community Nights · TinCaps, Komets & Fort Wayne FC"
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -38,7 +38,7 @@ export function EventsSection({ complianceMode }: EventsSectionProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.08 }}
               whileHover={reduceMotion ? undefined : { y: -6 }}
-              className="group rounded-sm border border-charcoal/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg"
+              className="group rounded-sm border border-charcoal/15 bg-white p-6 shadow-sm transition-shadow hover:border-brass/30 hover:shadow-lg"
             >
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brass/30 bg-brass/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-forest">
                 <CalendarDays className="h-3.5 w-3.5" />
