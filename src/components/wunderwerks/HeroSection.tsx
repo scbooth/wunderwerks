@@ -31,8 +31,9 @@ export function HeroSection() {
             Poured in Stein.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-sand/75 md:text-xl">
-            Traditional Bavarian lagers, crafted in a historic Fort Wayne
-            slaughterhouse. Clean. Crisp. Compliant.
+            Bavarian-style lagers brewed by two people in a renovated
+            slaughterhouse on Wells Street. Clean beer, low fuss, always
+            compliant.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -49,7 +50,7 @@ export function HeroSection() {
               onClick={() => scrollToSection("events")}
               className="group inline-flex items-center justify-center gap-2 rounded-sm border border-sand/25 px-6 py-3 text-sm uppercase tracking-[0.2em] text-sand transition hover:border-brass hover:text-brass"
             >
-              This Week&apos;s Slay
+              Weekly Hangouts
               <ArrowDownRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
             </button>
           </div>

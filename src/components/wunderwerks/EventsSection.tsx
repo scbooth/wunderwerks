@@ -25,8 +25,8 @@ export function EventsSection({ complianceMode }: EventsSectionProps) {
       ) : (
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          title="This Week's Slay"
-          subtitle="Fort Wayne Events · Premium & Community-Driven"
+          title="Weekly Hangouts"
+          subtitle="Self-Sustaining Taproom Nights · Zero Extra Labor"
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">

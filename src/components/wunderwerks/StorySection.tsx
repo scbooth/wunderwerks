@@ -23,12 +23,11 @@ export function StorySection() {
             <div className="flex items-start gap-3">
               <Anchor className="mt-1 h-5 w-5 shrink-0 text-brass" />
               <p>
-                Originally built in the early 1900s as a bustling local
-                slaughterhouse, 1515 Wells Street has been transformed into a
-                modern cathedral of fermentation. We&apos;ve kept the original
-                iron rafters and exposed bricks, trading meat hooks for beer
-                taps to bring Fort Wayne the cleanest lagers this side of
-                Munich.
+                Built in the early 1900s as a local slaughterhouse, 1515 Wells
+                Street is now a small-batch brewery run by two brewers. We kept
+                the iron rafters and exposed brick, swapped meat hooks for tap
+                handles, and focused on making clean, approachable lagers you
+                can actually read the menu for.
               </p>
             </div>
           </motion.div>

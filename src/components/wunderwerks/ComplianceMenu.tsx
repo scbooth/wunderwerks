@@ -1,14 +1,25 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Coffee, Soup, type LucideIcon } from "lucide-react";
-import { complianceMenu } from "@/lib/complianceMenu";
-import type { ComplianceItem } from "@/lib/types";
-import type { ComplianceMode } from "@/lib/types";
+import {
+  Coffee,
+  Sandwich,
+  Soup,
+  Truck,
+  UtensilsCrossed,
+  type LucideIcon,
+} from "lucide-react";
+import {
+  complianceMenu,
+  deliveryBlurb,
+  deliveryPartners,
+} from "@/lib/complianceMenu";
+import type { ComplianceItem, ComplianceMode } from "@/lib/types";
 import { SectionHeading, SectionShell } from "./ui/SectionHeading";
 
 const iconsById: Record<ComplianceItem["id"], LucideIcon> = {
-  "bier-kase-suppe": Soup,
+  "wunder-kase-soup": Soup,
+  "compliance-brat": Sandwich,
   "legal-beverages": Coffee,
 };
 
@@ -25,10 +36,16 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           title="The Compliance Board"
-          subtitle="Indiana Code Title 7.1 · Minimum Food Service, Elevated"
+          subtitle="Indiana Title 7.1 · Low-Prep, High-Quality, Two-Brewer Friendly"
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <p className="mx-auto mt-6 max-w-3xl text-center text-base leading-7 text-charcoal/70">
+          We sell beer by the glass, so the law asks for a little food on hand.
+          We keep it simple — one kettle, one steam drawer, and zero kitchen
+          staff.
+        </p>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {complianceMenu.map((item, index) => {
             const Icon = iconsById[item.id] ?? Coffee;
 
@@ -61,6 +78,49 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
             );
           })}
         </div>
+
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className={`mt-16 rounded-sm border border-charcoal/10 bg-charcoal p-8 text-sand md:p-10 ${
+            emphasized ? "brass-glow" : ""
+          }`}
+        >
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div className="max-w-xl">
+              <div className="flex items-center gap-2 text-brass">
+                <Truck className="h-5 w-5" strokeWidth={1.5} />
+                <span className="text-xs uppercase tracking-[0.22em]">
+                  Wells Street Delivery
+                </span>
+              </div>
+              <h3 className="mt-3 font-[family-name:var(--font-germania)] text-3xl">
+                Order to Your Bar Stool
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-sand/75 md:text-base">
+                {deliveryBlurb}
+              </p>
+            </div>
+            <UtensilsCrossed
+              className="hidden h-16 w-16 shrink-0 text-brass/20 md:block"
+              strokeWidth={1}
+            />
+          </div>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {deliveryPartners.map((partner) => (
+              <div
+                key={partner.id}
+                className="rounded-sm border border-sand/10 bg-sand/5 p-4"
+              >
+                <p className="font-medium text-sand">{partner.name}</p>
+                <p className="mt-1 text-sm text-sand/60">{partner.specialty}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </SectionShell>
   );

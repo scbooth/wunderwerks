@@ -78,6 +78,7 @@ export function MobileMenu({
               <ComplianceToggle
                 mode={complianceMode}
                 onChange={onComplianceChange}
+                compact
               />
             </div>
           </motion.aside>

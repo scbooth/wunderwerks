@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { Timer } from "lucide-react";
 import {
   getCountdownParts,
-  getNextHomeGame,
-  getSpecialsStartTime,
+  getNextAwayGame,
+  getRallyStartTime,
 } from "@/lib/tinCapsSchedule";
 
 export function TinCapsCountdown() {
@@ -23,8 +23,8 @@ export function TinCapsCountdown() {
     return () => window.clearInterval(interval);
   }, []);
 
-  const nextGame = getNextHomeGame(now);
-  const target = nextGame ? getSpecialsStartTime(nextGame) : null;
+  const nextGame = getNextAwayGame(now);
+  const target = nextGame ? getRallyStartTime(nextGame) : null;
   const countdown = target ? getCountdownParts(target, now) : null;
 
   return (
@@ -32,12 +32,12 @@ export function TinCapsCountdown() {
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-2 px-6 py-3 text-sand sm:flex-row sm:items-center sm:justify-between md:px-10">
         <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-brass">
           <Timer className="h-4 w-4" />
-          Wunder-Caps Donnerstag
+          Wunder-Caps Away Rally
         </div>
 
         {nextGame && countdown ? (
           <p className="text-sm text-sand/85 md:text-base">
-            Next TinCaps Pitch:{" "}
+            Next away game:{" "}
             <motion.span
               key={pulseKey}
               initial={reduceMotion ? false : { scale: 1.08, opacity: 0.7 }}
@@ -47,15 +47,15 @@ export function TinCapsCountdown() {
             >
               {countdown.hours}h {countdown.minutes}m
             </motion.span>{" "}
-            until Wunder-Caps Donnerstag Specials begin.
+            until Thirsty Thursday rally — $1 off Stein fills.
             <span className="mt-1 block text-xs text-sand/50 sm:ml-2 sm:mt-0 sm:inline">
-              vs {nextGame.opponent}
+              @ {nextGame.opponent}
             </span>
           </p>
         ) : (
           <p className="text-sm text-sand/70">
-            Season schedule loading. Check back for the next Parkview Field
-            home stand.
+            Away-game schedule loading. Check back for the next Wunder-Caps
+            rally.
           </p>
         )}
       </div>

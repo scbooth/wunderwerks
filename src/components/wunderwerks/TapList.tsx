@@ -53,7 +53,7 @@ export function TapList({
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           title="On Tap Today"
-          subtitle="Bavarian-Industrial Fusion"
+          subtitle="Clean Lagers · Plain English · Two Brewers Behind the Bar"
         />
 
         <div className="mt-8 flex flex-wrap gap-3">

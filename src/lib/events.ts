@@ -2,27 +2,27 @@ import type { BreweryEvent } from "./types";
 
 export const events: BreweryEvent[] = [
   {
-    id: "wunder-caps-donnerstag",
-    title: "Wunder-Caps Gameday Donnerstag",
-    schedule: "Thirsty Thursday · TinCaps Home Games",
-    hook: "On days when our hometown Fort Wayne TinCaps play at Parkview Field, the pre-game starts here. Bring your gameday ticket stub for a complimentary first Stein fill upgrade, and catch the live radio broadcast under our pavilion.",
+    id: "slab-and-stein",
+    title: "Slab & Stein BYO Vinyl Night",
+    schedule: "Every Tuesday",
+    hook: "We set up a turntable at the bar. Bring your favorite records, sign the clipboard, and we spin them over the taproom speakers. No host, no prep — just good beer and community-curated playlists.",
   },
   {
-    id: "cleaver-board-masterclass",
-    title: "The Cleaver & Board Masterclass",
-    schedule: "Every Tuesday · 6:30 PM",
-    hook: "A sophisticated nod to our slaughterhouse history. Learn professional, artisan charcuterie curing and knife skills from visiting master butchers, paired with heavy German bock flights.",
+    id: "tabletop-and-taps",
+    title: "Tabletop & Taps",
+    schedule: "Every Wednesday",
+    hook: "Skip the loud trivia hosts. Our Haus Board Game Shelf is stocked with premium indie favorites — Carcassonne, Ticket to Ride, Catan, and more. Grab friends, grab a table, buy pints, and play. It runs itself.",
   },
   {
-    id: "rivergreenway-radler-run",
-    title: "The Rivergreenway Radler Run",
-    schedule: "Saturdays · 10:00 AM",
-    hook: "Capitalizing on Fort Wayne's beautiful trails. Meet at 10:00 AM for a guided 5K run along the rivergreenway, finishing back at the taproom courtyard with a complimentary, cold house Radler.",
+    id: "wunder-caps-away",
+    title: "Wunder-Caps Away Game Rallies",
+    schedule: "Thirsty Thursday · TinCaps Away Games",
+    hook: "When the Fort Wayne TinCaps are on the road, we pipe the live audio into the taproom, put the game on, and take $1 off cold Stein fills. Downtown baseball energy with zero extra labor from us.",
   },
   {
-    id: "schlachtfest",
-    title: "Schlachtfest",
-    schedule: "Monthly · Last Friday",
-    hook: "A monthly collaborative dinner with local Fort Wayne farms, highlighting nose-to-tail roasting paired alongside rare cellar lagers.",
+    id: "food-truck-takeover",
+    title: "Wells Street Food Truck Takeover",
+    schedule: "Friday & Saturday Nights",
+    hook: "Local food trucks roll into our industrial courtyard. They cook, serve, and clean up — we pour clean lagers. Real food, real easy for a two-person crew.",
   },
 ];

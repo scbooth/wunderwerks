@@ -7,21 +7,25 @@ interface ComplianceToggleProps {
   mode: ComplianceMode;
   onChange: (mode: ComplianceMode) => void;
   className?: string;
+  compact?: boolean;
 }
 
 export function ComplianceToggle({
   mode,
   onChange,
   className = "",
+  compact = false,
 }: ComplianceToggleProps) {
   const isProhibition = mode === "prohibition";
   const reduceMotion = useReducedMotion();
 
   return (
     <div className={`flex flex-col gap-2 ${className}`}>
-      <span className="text-[10px] uppercase tracking-[0.25em] text-sand/70">
-        Compliance Mode
-      </span>
+      {!compact ? (
+        <span className="text-[10px] uppercase tracking-[0.25em] text-sand/70">
+          {isProhibition ? "Soup & brats only" : "Full tap list unlocked"}
+        </span>
+      ) : null}
       <button
         type="button"
         role="switch"
@@ -34,10 +38,10 @@ export function ComplianceToggle({
         onClick={() =>
           onChange(isProhibition ? "wunderwerks" : "prohibition")
         }
-        className={`relative flex h-11 w-56 items-center rounded-full border p-1 transition-colors duration-300 ${
+        className={`relative flex h-11 w-full max-w-xs items-center rounded-full border p-1 transition-colors duration-300 sm:max-w-none sm:w-56 ${
           isProhibition
             ? "border-sand/20 bg-charcoal/90"
-            : "border-brass/40 bg-forest"
+            : "border-brass/40 bg-forest shadow-sm shadow-brass/10"
         }`}
       >
         <motion.span
@@ -53,14 +57,14 @@ export function ComplianceToggle({
             !isProhibition ? "text-charcoal" : "text-sand/50"
           }`}
         >
-          Wunderwerks
+          Beers On
         </span>
         <span
           className={`relative z-10 flex-1 text-center text-[11px] font-medium uppercase tracking-wide ${
             isProhibition ? "text-sand" : "text-sand/50"
           }`}
         >
-          Prohibition
+          Legal Only
         </span>
       </button>
     </div>

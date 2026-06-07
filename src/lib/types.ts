@@ -20,6 +20,12 @@ export interface ComplianceItem {
   description: string;
 }
 
+export interface DeliveryPartner {
+  id: string;
+  name: string;
+  specialty: string;
+}
+
 export interface BreweryEvent {
   id: string;
   title: string;
