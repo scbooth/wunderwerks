@@ -17,7 +17,7 @@ export function HeroSection() {
       <div className="absolute inset-0 steel-grid opacity-30" />
       <div className="absolute inset-0 bg-linear-to-br from-charcoal via-[#121212] to-forest/40" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-28 pt-40 lg:grid-cols-2 lg:items-center lg:px-16 lg:pb-32 lg:pt-44">
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-28 pt-32 lg:grid-cols-2 lg:items-center lg:px-16 lg:pb-32 lg:pt-36">
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
@@ -25,7 +25,7 @@ export function HeroSection() {
         >
           <div className="mb-4 inline-flex items-center gap-2 rounded-sm border border-brass/50 bg-brass/15 px-3 py-1.5 text-label text-cream">
             <CalendarDays className="h-3.5 w-3.5 text-brass" />
-            {grandOpening.headline}
+            {grandOpening.month}
           </div>
           <p className="mb-4 text-label text-cream-muted">
             1515 Wells Street · Fort Wayne, Indiana

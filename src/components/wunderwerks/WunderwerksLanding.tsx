@@ -13,8 +13,7 @@ import { MobileMenu } from "./MobileMenu";
 import { StorySection } from "./StorySection";
 import { TapList } from "./TapList";
 import { FortWayneSection } from "./FortWayneSection";
-import { FortWayneSportsBar } from "./FortWayneSportsBar";
-import { GrandOpeningBanner } from "./GrandOpeningBanner";
+import { GrandOpeningStickyBanner } from "./GrandOpeningStickyBanner";
 
 export function WunderwerksLanding() {
   const reduceMotion = useReducedMotion();
@@ -27,7 +26,7 @@ export function WunderwerksLanding() {
 
   return (
     <div
-      className={`relative min-h-screen pb-32 transition-[filter] duration-300 ${
+      className={`relative min-h-screen pb-56 transition-[filter] duration-300 md:pb-48 ${
         isProhibition ? "grayscale" : ""
       }`}
     >
@@ -37,8 +36,6 @@ export function WunderwerksLanding() {
         complianceMode={complianceMode}
         onComplianceChange={setComplianceMode}
       />
-
-      <GrandOpeningBanner />
 
       <MobileMenu
         open={mobileMenuOpen}
@@ -104,14 +101,14 @@ export function WunderwerksLanding() {
         </div>
       </footer>
 
-      <div className="fixed bottom-28 left-4 z-40 hidden lg:block">
+      <div className="fixed bottom-52 left-4 z-40 hidden lg:block md:bottom-44">
         <ComplianceToggle
           mode={complianceMode}
           onChange={setComplianceMode}
         />
       </div>
 
-      <FortWayneSportsBar />
+      <GrandOpeningStickyBanner />
     </div>
   );
 }

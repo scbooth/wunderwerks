@@ -1,17 +1,15 @@
 export const grandOpening = {
   label: "Grand Opening",
   month: "September 2026",
-  headline: "Grand Opening · September 2026",
+  headline: "Grand Opening",
+  address: "1515 Wells Street, Fort Wayne, IN",
+  tagline: "Join the first pour list",
+  subline: "Opening updates coming soon",
   detail:
     "Doors open this September at 1515 Wells Street. Follow along as we finish the build-out and get ready to pour.",
-  /** Used for optional countdown — adjust if a firm date is set. */
-  date: "2026-09-12T16:00:00",
+  announcement:
+    "First pours, soft-opening details, and launch events will be announced here.",
+  ctaLabel: "Get Opening Updates",
+  ctaHref:
+    "mailto:hello@wunderwerks.com?subject=Wunderwerks%20Opening%20Updates",
 } as const;
-
-export function getGrandOpeningCountdown(now = new Date()) {
-  const target = new Date(grandOpening.date);
-  const diffMs = Math.max(0, target.getTime() - now.getTime());
-  const totalDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-
-  return { target, totalDays, hasOpened: diffMs === 0 && now >= target };
-}
