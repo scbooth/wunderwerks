@@ -47,8 +47,8 @@ export const friendsFamilyBeers: Beer[] = [
     series: "friends-family",
   },
   {
-    id: "the-gunkle",
-    name: "The Gunkle",
+    id: "the-gunkle-dunkle",
+    name: "The Gunkle Dunkle",
     abv: 6.5,
     style: "Hazy IPA",
     description:
