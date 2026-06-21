@@ -1,11 +1,11 @@
 import type { Beer } from "./types";
 
 export const beerPhilosophy =
-  "Traditional lagers, modern IPAs, and small-batch experimentation.";
+  "Traditional lagers, hop-forward ales, and small-batch experimental beers brewed in a historic Fort Wayne landmark.";
 
 export const featuredBeer: Beer = {
-  id: "lumen",
-  name: "Lumen",
+  id: "ilumenate",
+  name: "iLUMENate",
   abv: 6.0,
   style: "New England IPA",
   description:

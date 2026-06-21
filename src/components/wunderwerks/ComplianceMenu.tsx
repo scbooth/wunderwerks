@@ -56,18 +56,18 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.08 }}
                 whileHover={reduceMotion ? undefined : { y: -4 }}
-                className={`relative overflow-hidden rounded-sm border border-charcoal/10 bg-sand p-6 shadow-sm transition-shadow ${
-                  emphasized ? "brass-glow ring-1 ring-brass/30" : ""
+                className={`relative overflow-hidden rounded-sm border border-steel/15 bg-sand p-6 shadow-sm transition-shadow ${
+                  emphasized ? "copper-glow ring-1 ring-copper/30" : ""
                 }`}
               >
-                <div className="absolute inset-x-0 top-0 h-px bg-brass/60" />
+                <div className="absolute inset-x-0 top-0 h-px bg-copper/50" />
                 <div className="mb-4 flex items-center justify-between">
                   <span className="text-label-light">
                     {item.category}
                   </span>
-                  <Icon className="h-5 w-5 text-forest/70" strokeWidth={1.5} />
+                  <Icon className="h-5 w-5 text-brick/80" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-2xl font-semibold text-charcoal">
+                <h3 className="font-display text-2xl font-semibold text-gunmetal">
                   {item.name}
                 </h3>
                 <p className="mt-3 text-prose">
@@ -83,14 +83,14 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`mt-16 rounded-sm border border-brass/15 bg-charcoal p-8 text-sand md:p-10 ${
-            emphasized ? "brass-glow" : ""
+          className={`mt-16 rounded-sm border border-brick/20 bg-brick p-8 text-cream md:p-10 ${
+            emphasized ? "copper-glow" : ""
           }`}
         >
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <div className="max-w-xl">
-              <div className="flex items-center gap-2 text-label text-cream">
-                <Truck className="h-5 w-5 text-brass" strokeWidth={1.5} />
+              <div className="flex items-center gap-2 text-label">
+                <Truck className="h-5 w-5 text-amber" strokeWidth={1.5} />
                 <span>Wells Street Delivery</span>
               </div>
               <h3 className="font-display mt-3 text-3xl font-semibold text-cream">
@@ -101,7 +101,7 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
               </p>
             </div>
             <UtensilsCrossed
-              className="hidden h-16 w-16 shrink-0 text-brass/20 md:block"
+              className="hidden h-16 w-16 shrink-0 text-cream/20 md:block"
               strokeWidth={1}
             />
           </div>
@@ -110,10 +110,10 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
             {deliveryPartners.map((partner) => (
               <div
                 key={partner.id}
-                className="rounded-sm border border-sand/15 bg-sand/5 p-4"
+                className="rounded-sm border border-cream/20 bg-cream/10 p-4"
               >
                 <p className="font-medium text-cream">{partner.name}</p>
-                <p className="mt-1 text-sm text-cream-muted">{partner.specialty}</p>
+                <p className="mt-1 text-sm text-on-dark-muted">{partner.specialty}</p>
               </div>
             ))}
           </div>

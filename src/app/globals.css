@@ -1,24 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f0e6;
-  --foreground: #2c2925;
-  --cream: #ede6d8;
-  --cream-muted: #d4cbb8;
-  --cream-subtle: #b8ae9c;
+  --background: #f5efe2;
+  --foreground: #353535;
+  --cream: #f5efe2;
+  --cream-muted: #e8dfd0;
+  --cream-subtle: #5e6468;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-forest: #2d5034;
-  --color-charcoal: #2c2925;
-  --color-sand: #f5f0e6;
-  --color-brass: #b8956a;
-  --color-brick: #8b5e4a;
-  --color-cream: var(--cream);
-  --color-cream-muted: var(--cream-muted);
-  --color-cream-subtle: var(--cream-subtle);
+  --color-brick: #a34a2a;
+  --color-cream: #f5efe2;
+  --color-gunmetal: #353535;
+  --color-steel: #5e6468;
+  --color-copper: #b56a3a;
+  --color-amber: #d89b3d;
+  /* Legacy aliases — mapped to new palette */
+  --color-charcoal: #353535;
+  --color-sand: #f5efe2;
+  --color-brass: #b56a3a;
+  --color-cream-muted: #e8dfd0;
+  --color-cream-subtle: #5e6468;
   --font-sans: var(--font-inter);
 }
 
@@ -43,11 +47,10 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Readable body copy on light sections */
 .text-prose {
   font-size: 1.0625rem;
   line-height: 1.75;
-  color: rgb(44 41 37 / 0.88);
+  color: rgb(53 53 53 / 0.88);
 }
 
 @media (min-width: 768px) {
@@ -57,7 +60,6 @@ body {
   }
 }
 
-/* Primary copy on dark backgrounds — warm off-white, not gray */
 .text-on-dark {
   color: var(--cream);
 }
@@ -67,42 +69,48 @@ body {
 }
 
 .text-on-dark-subtle {
-  color: var(--cream-subtle);
+  color: rgb(245 239 226 / 0.72);
 }
 
-/* Section labels — readable, not washed-out brass */
 .text-label {
   font-size: 0.6875rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--cream-muted);
+  color: rgb(245 239 226 / 0.75);
 }
 
 .text-label-light {
   font-size: 0.6875rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgb(44 41 37 / 0.55);
+  color: rgb(94 100 104 / 0.85);
+}
+
+.brick-grid {
+  background-image:
+    linear-gradient(rgba(163, 74, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 74, 42, 0.04) 1px, transparent 1px);
+  background-size: 56px 28px;
 }
 
 .steel-grid {
   background-image:
-    linear-gradient(rgba(184, 149, 106, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(184, 149, 106, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(94, 100, 104, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94, 100, 104, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
-.brass-glow {
+.copper-glow {
   box-shadow:
-    0 0 0 1px rgba(184, 149, 106, 0.28),
-    0 0 24px rgba(184, 149, 106, 0.12);
+    0 0 0 1px rgba(181, 106, 58, 0.3),
+    0 0 20px rgba(216, 155, 61, 0.14);
 }
 
-.warm-gradient-dark {
+.warm-gradient-hero {
   background: linear-gradient(
-    145deg,
-    #2c2925 0%,
-    #3a3530 45%,
-    rgb(45 80 52 / 0.35) 100%
+    160deg,
+    #f5efe2 0%,
+    #f0e8d8 55%,
+    rgb(163 74 42 / 0.06) 100%
   );
 }

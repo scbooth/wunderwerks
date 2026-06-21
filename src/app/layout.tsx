@@ -16,7 +16,7 @@ const barlowCondensed = Barlow_Condensed({
 export const metadata: Metadata = {
   title: "Wunderwerks | Neighborhood Brewery on Wells Street",
   description:
-    "Fort Wayne neighborhood brewery at 1515 Wells Street — traditional lagers, modern IPAs, and small-batch experimentation in a historic brick-and-steel taproom.",
+    "Fort Wayne neighborhood brewery at 1515 Wells Street — traditional lagers, hop-forward ales, and small-batch experimental beers in a restored historic brick building.",
   metadataBase: new URL("https://wunderwerks.space"),
   icons: {
     icon: "/favicon.svg",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wunderwerks | Neighborhood Brewery on Wells Street",
     description:
-      "Fort Wayne neighborhood brewery at 1515 Wells Street — traditional lagers, modern IPAs, and small-batch experimentation in a historic brick-and-steel taproom.",
+      "Fort Wayne neighborhood brewery at 1515 Wells Street — traditional lagers, hop-forward ales, and small-batch experimental beers in a restored historic brick building.",
     url: "https://wunderwerks.space",
     siteName: "Wunderwerks",
     locale: "en_US",
@@ -42,7 +42,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${barlowCondensed.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-sand text-charcoal">{children}</body>
+      <body className="min-h-full bg-sand text-gunmetal">{children}</body>
     </html>
   );
 }

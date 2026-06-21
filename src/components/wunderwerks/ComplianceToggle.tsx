@@ -22,7 +22,7 @@ export function ComplianceToggle({
   return (
     <div className={`flex flex-col gap-2 ${className}`}>
       {!compact ? (
-        <span className="text-[10px] uppercase tracking-[0.2em] text-cream-muted">
+        <span className="text-[10px] uppercase tracking-[0.2em] text-steel">
           {isProhibition ? "Soup & brats only" : "Full tap list unlocked"}
         </span>
       ) : null}
@@ -40,28 +40,28 @@ export function ComplianceToggle({
         }
         className={`relative flex h-11 w-full max-w-xs items-center rounded-full border p-1 transition-colors duration-300 sm:max-w-none sm:w-56 ${
           isProhibition
-            ? "border-sand/20 bg-charcoal/90"
-            : "border-brass/40 bg-forest shadow-sm shadow-brass/10"
+            ? "border-steel/30 bg-white/80"
+            : "border-brick/30 bg-cream shadow-sm"
         }`}
       >
         <motion.span
           layout={!reduceMotion}
           transition={{ type: "spring", stiffness: 500, damping: 35 }}
           className={`absolute top-1 h-9 w-[calc(50%-4px)] rounded-full ${
-            isProhibition ? "bg-sand/15" : "bg-brass"
+            isProhibition ? "bg-steel/15" : "bg-brick"
           }`}
           style={{ left: isProhibition ? "calc(50% + 2px)" : "4px" }}
         />
         <span
           className={`relative z-10 flex-1 text-center text-[11px] font-medium uppercase tracking-wide ${
-            !isProhibition ? "text-charcoal" : "text-cream-muted"
+            !isProhibition ? "text-cream" : "text-steel"
           }`}
         >
           Beers On
         </span>
         <span
           className={`relative z-10 flex-1 text-center text-[11px] font-medium uppercase tracking-wide ${
-            isProhibition ? "text-sand" : "text-cream-muted"
+            isProhibition ? "text-gunmetal" : "text-steel"
           }`}
         >
           Legal Only

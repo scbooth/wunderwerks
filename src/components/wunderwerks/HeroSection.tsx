@@ -13,10 +13,10 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen scroll-mt-32 overflow-hidden bg-charcoal text-on-dark"
+      className="relative min-h-screen scroll-mt-32 overflow-hidden bg-sand text-gunmetal"
     >
-      <div className="absolute inset-0 steel-grid opacity-20" />
-      <div className="absolute inset-0 warm-gradient-dark" />
+      <div className="absolute inset-0 brick-grid opacity-60" />
+      <div className="absolute inset-0 warm-gradient-hero" />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-28 pt-32 lg:grid-cols-2 lg:items-center lg:px-16 lg:pb-32 lg:pt-36">
         <motion.div
@@ -24,22 +24,21 @@ export function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <div className="mb-4 inline-flex items-center gap-2 rounded-sm border border-brass/40 bg-brass/10 px-3 py-1.5 text-label text-cream">
-            <CalendarDays className="h-3.5 w-3.5 text-brass" />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-sm border border-brick/25 bg-brick/8 px-3 py-1.5 text-label-light">
+            <CalendarDays className="h-3.5 w-3.5 text-brick" />
             {grandOpening.month}
           </div>
-          <p className="mb-4 text-label text-cream-muted">
+          <p className="mb-4 text-label-light">
             1515 Wells Street · Fort Wayne, Indiana
           </p>
-          <h1 className="font-display text-5xl font-semibold leading-tight text-cream md:text-6xl lg:text-7xl">
+          <h1 className="font-display text-5xl font-semibold leading-tight text-gunmetal md:text-6xl lg:text-7xl">
             Good Beer.
             <br />
             Good Company.
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-[1.75] text-cream md:text-xl md:leading-[1.8]">
-            A neighborhood brewery in a historic Wells Street building — brick,
-            steel, glass, and a taproom built for locals. {beerPhilosophy}{" "}
-            {grandOpening.detail}
+          <p className="mt-6 max-w-xl text-lg leading-[1.75] text-gunmetal/90 md:text-xl md:leading-[1.8]">
+            A neighborhood brewery in a restored early-1900s brick building on
+            Wells Street. {beerPhilosophy} {grandOpening.detail}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
@@ -47,7 +46,7 @@ export function HeroSection() {
               (tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-cream-subtle/25 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-cream-muted"
+                  className="rounded-full border border-steel/25 bg-white/50 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-steel"
                 >
                   {tag}
                 </span>
@@ -59,15 +58,15 @@ export function HeroSection() {
             <button
               type="button"
               onClick={() => scrollToSection("featured-beer")}
-              className="group inline-flex items-center justify-center gap-2 rounded-sm border border-brass bg-brass px-6 py-3 text-sm font-medium uppercase tracking-[0.16em] text-charcoal transition hover:bg-cream"
+              className="group inline-flex items-center justify-center gap-2 rounded-sm border border-brick bg-brick px-6 py-3 text-sm font-medium uppercase tracking-[0.16em] text-cream transition hover:border-copper hover:bg-copper"
             >
-              Meet Lumen
+              Meet iLUMENate
               <ArrowDownRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
             </button>
             <button
               type="button"
               onClick={() => scrollToSection("tap-list")}
-              className="group inline-flex items-center justify-center gap-2 rounded-sm border border-cream-subtle/40 px-6 py-3 text-sm font-medium uppercase tracking-[0.16em] text-cream transition hover:border-brass hover:bg-cream/5"
+              className="group inline-flex items-center justify-center gap-2 rounded-sm border border-steel/35 bg-white/60 px-6 py-3 text-sm font-medium uppercase tracking-[0.16em] text-gunmetal transition hover:border-brick hover:text-brick"
             >
               Full Tap List
               <ArrowDownRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:translate-y-0.5" />

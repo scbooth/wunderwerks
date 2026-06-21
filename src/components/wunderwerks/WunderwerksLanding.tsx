@@ -52,7 +52,7 @@ export function WunderwerksLanding() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.3 }}
-            className="pointer-events-none fixed inset-0 z-20 bg-charcoal/35"
+            className="pointer-events-none fixed inset-0 z-20 bg-gunmetal/20"
           />
         ) : null}
       </AnimatePresence>
@@ -71,25 +71,25 @@ export function WunderwerksLanding() {
         <FortWayneSection complianceMode={complianceMode} />
       </main>
 
-      <footer className="relative z-10 border-t border-charcoal/10 bg-charcoal px-6 py-12 text-sand md:px-10">
+      <footer className="relative z-10 border-t border-brick/20 bg-gunmetal px-6 py-12 text-cream md:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
             <p className="font-display text-2xl font-semibold text-cream">
               Wunderwerks
             </p>
-            <p className="mt-2 text-sm text-cream-muted">
+            <p className="mt-2 text-sm text-on-dark-muted">
               Neighborhood brewery · Wells Street, Fort Wayne
             </p>
-            <div className="mt-4 flex items-start gap-2 text-base text-cream-muted">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
+            <div className="mt-4 flex items-start gap-2 text-base text-on-dark-muted">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-amber" />
               <span>1515 Wells Street, Fort Wayne, IN</span>
             </div>
-            <div className="mt-3 flex items-start gap-2 text-base text-cream-muted">
-              <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
+            <div className="mt-3 flex items-start gap-2 text-base text-on-dark-muted">
+              <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-amber" />
               <span>Grand Opening · September 2026</span>
             </div>
-            <div className="mt-3 flex items-start gap-2 text-base text-cream-muted">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
+            <div className="mt-3 flex items-start gap-2 text-base text-on-dark-muted">
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-amber" />
               <span>Taproom hours posted at opening · Thu–Sun planned</span>
             </div>
           </div>
@@ -98,7 +98,7 @@ export function WunderwerksLanding() {
             <a
               href="#"
               aria-label="Wunderwerks on Instagram"
-              className="rounded-full border border-sand/20 p-3 transition hover:border-brass hover:text-brass"
+              className="rounded-full border border-cream/25 p-3 transition hover:border-amber hover:text-amber"
             >
               <Camera className="h-5 w-5" />
             </a>

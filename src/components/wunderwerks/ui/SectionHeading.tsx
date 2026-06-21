@@ -7,7 +7,6 @@ interface SectionHeadingProps {
   title: string;
   subtitle?: string;
   align?: "left" | "center";
-  /** light = sand/white sections; dark = charcoal sections */
   tone?: "light" | "dark";
 }
 
@@ -30,18 +29,18 @@ export function SectionHeading({
     >
       <h2
         className={`font-display text-4xl font-semibold md:text-5xl ${
-          isDark ? "text-cream" : "text-charcoal"
+          isDark ? "text-cream" : "text-gunmetal"
         }`}
       >
         {title}
       </h2>
       <div
-        className={`mt-4 h-px w-24 bg-brass ${align === "center" ? "mx-auto" : ""}`}
+        className={`mt-4 h-px w-24 bg-copper ${align === "center" ? "mx-auto" : ""}`}
       />
       {subtitle ? (
         <p
           className={`mt-4 max-w-2xl text-xs uppercase tracking-[0.18em] md:text-sm ${
-            isDark ? "text-cream-muted" : "text-label-light"
+            isDark ? "text-on-dark-muted" : "text-label-light"
           } ${align === "center" ? "mx-auto" : ""}`}
         >
           {subtitle}

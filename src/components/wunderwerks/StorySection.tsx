@@ -9,7 +9,7 @@ export function StorySection() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <SectionShell id="story" className="bg-sand">
+    <SectionShell id="story" className="bg-cream">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
         <div>
           <SectionHeading title="Our Story" />
@@ -21,7 +21,7 @@ export function StorySection() {
             className="mt-8 space-y-6 text-prose md:text-lg"
           >
             <div className="flex items-start gap-3">
-              <Building2 className="mt-1 h-5 w-5 shrink-0 text-brass" />
+              <Building2 className="mt-1 h-5 w-5 shrink-0 text-brick" />
               <p>
                 1515 Wells Street was once a meatpacking facility. We kept the
                 original brick, steel, and timber bones and turned the space into
@@ -32,8 +32,8 @@ export function StorySection() {
             <p>
               Run by two brewers with family roots in the craft, our focus is
               simple: pour excellent beer and keep the taproom welcoming. The
-              brewing draws on traditional lager techniques and modern IPA
-              experimentation — heritage-inspired, never costume.
+              brewing draws on traditional lager techniques and modern
+              hop-forward ales — heritage-inspired, never costume.
             </p>
             <p>
               This is a place where Wells Street neighbors meet after work,

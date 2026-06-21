@@ -12,11 +12,11 @@ interface PlaceholderImageProps {
 
 const variantStyles = {
   copper:
-    "from-[#3a3530] via-[#4a3828] to-[#8b5e4a] border-brass/25",
+    "from-[#d4cbb8] via-[#c9a88a] to-[#b56a3a] border-copper/30",
   brick:
-    "from-[#3a2f28] via-[#5c4038] to-[#2c2925] border-brick/30",
+    "from-[#e8dfd0] via-[#c4836a] to-[#a34a2a] border-brick/25",
   glass:
-    "from-forest/60 via-[#3a3530] to-[#4a5568] border-brass/20",
+    "from-[#e8dfd0] via-[#d4cbb8] to-[#5e6468]/40 border-steel/25",
 };
 
 export function PlaceholderImage({
@@ -36,11 +36,11 @@ export function PlaceholderImage({
       whileHover={reduceMotion ? undefined : { scale: 1.01 }}
       className={`relative overflow-hidden rounded-sm border bg-linear-to-br shadow-md ${variantStyles[variant]} ${className}`}
     >
-      <div className="absolute inset-0 steel-grid opacity-30" />
-      <div className="absolute inset-0 bg-linear-to-t from-charcoal/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 brick-grid opacity-30" />
+      <div className="absolute inset-0 bg-linear-to-t from-gunmetal/15 via-transparent to-transparent" />
       <div className="relative flex h-full min-h-40 flex-col items-center justify-center gap-3 p-6 text-center">
-        <Icon className="h-10 w-10 text-brass/75" strokeWidth={1.25} />
-        <p className="text-xs uppercase tracking-[0.2em] text-cream-muted">
+        <Icon className="h-10 w-10 text-cream/90" strokeWidth={1.25} />
+        <p className="text-xs uppercase tracking-[0.2em] text-cream/85">
           {label}
         </p>
       </div>
