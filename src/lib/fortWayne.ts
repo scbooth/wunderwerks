@@ -149,8 +149,9 @@ export function getBroadcastStartTime(broadcast: SportsBroadcast): Date {
 export function getCountdownParts(target: Date, now = new Date()) {
   const diffMs = Math.max(0, target.getTime() - now.getTime());
   const totalMinutes = Math.floor(diffMs / 60000);
-  const hours = Math.floor(totalMinutes / 60);
+  const days = Math.floor(totalMinutes / (60 * 24));
+  const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
   const minutes = totalMinutes % 60;
 
-  return { hours, minutes, totalMinutes };
+  return { days, hours, minutes, totalMinutes };
 }

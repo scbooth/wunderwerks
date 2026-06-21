@@ -18,7 +18,7 @@ export function StorySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="mt-8 space-y-6 text-base leading-8 text-charcoal/85 md:text-lg"
+            className="mt-8 space-y-6 text-prose md:text-lg"
           >
             <div className="flex items-start gap-3">
               <Anchor className="mt-1 h-5 w-5 shrink-0 text-brass" />

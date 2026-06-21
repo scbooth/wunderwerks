@@ -41,7 +41,7 @@ export function TapList({
     beers[0];
 
   return (
-    <SectionShell id="tap-list" className="relative bg-charcoal text-sand">
+    <SectionShell id="tap-list" className="relative bg-charcoal text-on-dark">
       {isProhibition ? (
         <div className="mx-auto flex min-h-[280px] max-w-7xl items-center justify-center px-6 text-center">
           <p className="font-[family-name:var(--font-germania)] text-3xl text-brass md:text-4xl">
@@ -53,6 +53,7 @@ export function TapList({
         <SectionHeading
           title="On Tap Today"
           subtitle="Slaughterhouse Hefe · Cleaver Amber · Compliance Pilsner"
+          tone="dark"
         />
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -61,6 +62,7 @@ export function TapList({
               key={filter.id}
               label={filter.label}
               active={activeFilter === filter.id}
+              variant="dark"
               onClick={() => {
                 onFilterChange(filter.id);
                 const nextBeer =
@@ -87,12 +89,12 @@ export function TapList({
                   className={`w-full rounded-sm border px-5 py-4 text-left transition ${
                     active
                       ? "border-brass bg-forest/40"
-                      : "border-sand/10 bg-charcoal hover:border-brass/40"
+                      : "border-cream-subtle/25 bg-charcoal hover:border-brass/50"
                   }`}
                 >
                   <div className="flex items-center justify-between gap-4">
-                    <span className="font-medium text-sand">{beer.name}</span>
-                    <span className="shrink-0 text-sm text-brass">
+                    <span className="font-medium text-cream">{beer.name}</span>
+                    <span className="shrink-0 text-sm font-medium text-cream-muted">
                       {beer.abv}% ABV
                     </span>
                   </div>
@@ -109,36 +111,30 @@ export function TapList({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.25 }}
-                className="rounded-sm border border-brass/25 bg-linear-to-br from-forest/30 to-charcoal p-8 shadow-xl"
+                className="rounded-sm border border-brass/30 bg-linear-to-br from-forest/30 to-charcoal p-8 shadow-xl"
               >
                 <div className="mb-6 flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.25em] text-brass">
-                      Selected Tap
-                    </p>
-                    <h3 className="mt-2 font-[family-name:var(--font-germania)] text-3xl">
+                    <p className="text-label text-cream-muted">Selected Tap</p>
+                    <h3 className="mt-2 font-[family-name:var(--font-germania)] text-3xl text-cream md:text-4xl">
                       {selectedBeer.name}
                     </h3>
                   </div>
-                  <Beer className="h-8 w-8 text-brass/80" />
+                  <Beer className="h-8 w-8 shrink-0 text-brass" />
                 </div>
-                <p className="text-lg leading-8 text-sand/80">
+                <p className="text-lg leading-[1.75] text-cream md:text-xl md:leading-[1.8]">
                   {selectedBeer.description}
                 </p>
-                <div className="mt-8 grid gap-4 border-t border-sand/10 pt-6 sm:grid-cols-2">
+                <div className="mt-8 grid gap-6 border-t border-cream-subtle/20 pt-6 sm:grid-cols-2">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-brass">
-                      ABV
-                    </p>
-                    <p className="mt-1 text-2xl font-semibold">
+                    <p className="text-label text-cream-muted">ABV</p>
+                    <p className="mt-2 text-3xl font-semibold tabular-nums text-cream">
                       {selectedBeer.abv}%
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-brass">
-                      Glassware
-                    </p>
-                    <p className="mt-1 text-sand/85">{selectedBeer.glassware}</p>
+                    <p className="text-label text-cream-muted">Glassware</p>
+                    <p className="mt-2 text-lg text-cream">{selectedBeer.glassware}</p>
                   </div>
                 </div>
               </motion.div>

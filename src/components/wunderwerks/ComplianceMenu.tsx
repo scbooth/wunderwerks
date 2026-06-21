@@ -40,7 +40,7 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
           subtitle="Indiana Code Title 7.1 · House Menu & Local Partnerships"
         />
 
-        <p className="mx-auto mt-6 max-w-3xl text-center text-base leading-8 text-charcoal/75 md:text-lg">
+        <p className="mx-auto mt-6 max-w-3xl text-center text-prose md:text-lg">
           {corridorIntro}
         </p>
 
@@ -62,7 +62,7 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-brass" />
                 <div className="mb-4 flex items-center justify-between">
-                  <span className="text-[11px] uppercase tracking-[0.22em] text-brass">
+                  <span className="text-label-light">
                     {item.category}
                   </span>
                   <Icon className="h-5 w-5 text-forest/70" strokeWidth={1.5} />
@@ -70,7 +70,7 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
                 <h3 className="font-[family-name:var(--font-germania)] text-2xl text-charcoal">
                   {item.name}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-charcoal/75 md:text-base">
+                <p className="mt-3 text-prose">
                   {item.description}
                 </p>
               </motion.article>
@@ -89,16 +89,14 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
         >
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <div className="max-w-xl">
-              <div className="flex items-center gap-2 text-brass">
-                <Truck className="h-5 w-5" strokeWidth={1.5} />
-                <span className="text-xs uppercase tracking-[0.22em]">
-                  Wells Street Delivery
-                </span>
+              <div className="flex items-center gap-2 text-label text-cream">
+                <Truck className="h-5 w-5 text-brass" strokeWidth={1.5} />
+                <span>Wells Street Delivery</span>
               </div>
-              <h3 className="mt-3 font-[family-name:var(--font-germania)] text-3xl">
+              <h3 className="mt-3 font-[family-name:var(--font-germania)] text-3xl text-cream">
                 Eat Local, Stay Seated
               </h3>
-              <p className="mt-4 text-sm leading-7 text-sand/75 md:text-base">
+              <p className="mt-4 text-base leading-[1.75] text-cream md:text-lg md:leading-[1.8]">
                 {corridorBlurb}
               </p>
             </div>
@@ -114,8 +112,8 @@ export function ComplianceMenu({ complianceMode }: ComplianceMenuProps) {
                 key={partner.id}
                 className="rounded-sm border border-sand/15 bg-sand/5 p-4"
               >
-                <p className="font-medium text-sand">{partner.name}</p>
-                <p className="mt-1 text-sm text-sand/60">{partner.specialty}</p>
+                <p className="font-medium text-cream">{partner.name}</p>
+                <p className="mt-1 text-sm text-cream-muted">{partner.specialty}</p>
               </div>
             ))}
           </div>

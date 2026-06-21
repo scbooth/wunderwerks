@@ -26,7 +26,7 @@ export function Header({
           onClick={() => scrollToSection("hero")}
           className="group text-left"
         >
-          <span className="font-[family-name:var(--font-germania)] text-2xl tracking-wide text-sand md:text-3xl">
+          <span className="font-[family-name:var(--font-germania)] text-2xl tracking-wide text-cream md:text-3xl">
             Wunderwerks
           </span>
           <span className="mt-1 block h-0.5 w-0 bg-brass transition-all duration-300 group-hover:w-full" />
@@ -38,7 +38,7 @@ export function Header({
               key={link.id}
               type="button"
               onClick={() => scrollToSection(link.id)}
-              className="text-sm uppercase tracking-[0.18em] text-sand/80 transition hover:text-brass"
+              className="text-sm font-medium uppercase tracking-[0.14em] text-cream-muted transition hover:text-cream"
             >
               {link.label}
             </button>
@@ -57,7 +57,7 @@ export function Header({
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
           onClick={onMobileMenuToggle}
-          className="rounded-full border border-sand/20 p-2 text-sand transition hover:border-brass lg:hidden"
+          className="rounded-full border border-cream-subtle/40 p-2 text-cream transition hover:border-brass lg:hidden"
         >
           <Menu className="h-5 w-5" />
         </button>

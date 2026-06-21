@@ -22,7 +22,7 @@ export function ComplianceToggle({
   return (
     <div className={`flex flex-col gap-2 ${className}`}>
       {!compact ? (
-        <span className="text-[10px] uppercase tracking-[0.25em] text-sand/70">
+        <span className="text-[10px] uppercase tracking-[0.2em] text-cream-muted">
           {isProhibition ? "Soup & brats only" : "Full tap list unlocked"}
         </span>
       ) : null}
@@ -54,14 +54,14 @@ export function ComplianceToggle({
         />
         <span
           className={`relative z-10 flex-1 text-center text-[11px] font-medium uppercase tracking-wide ${
-            !isProhibition ? "text-charcoal" : "text-sand/50"
+            !isProhibition ? "text-charcoal" : "text-cream-muted"
           }`}
         >
           Beers On
         </span>
         <span
           className={`relative z-10 flex-1 text-center text-[11px] font-medium uppercase tracking-wide ${
-            isProhibition ? "text-sand" : "text-sand/50"
+            isProhibition ? "text-sand" : "text-cream-muted"
           }`}
         >
           Legal Only

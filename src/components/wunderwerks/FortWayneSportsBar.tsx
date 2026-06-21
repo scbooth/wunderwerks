@@ -2,13 +2,13 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Timer } from "lucide-react";
 import {
   getBroadcastStartTime,
   getCountdownParts,
   getNextBroadcast,
   getTeamById,
 } from "@/lib/fortWayne";
+import { CountdownDisplay } from "./ui/CountdownDisplay";
 
 export function FortWayneSportsBar() {
   const reduceMotion = useReducedMotion();
@@ -16,11 +16,13 @@ export function FortWayneSportsBar() {
   const [pulseKey, setPulseKey] = useState(0);
 
   useEffect(() => {
-    const interval = window.setInterval(() => {
+    const tick = () => {
       setNow(new Date());
       setPulseKey((value) => value + 1);
-    }, 60000);
+    };
 
+    tick();
+    const interval = window.setInterval(tick, 60_000);
     return () => window.clearInterval(interval);
   }, []);
 
@@ -29,36 +31,41 @@ export function FortWayneSportsBar() {
   const target = nextBroadcast ? getBroadcastStartTime(nextBroadcast) : null;
   const countdown = target ? getCountdownParts(target, now) : null;
 
-  return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-brass/25 bg-charcoal/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl flex-col items-start gap-2 px-6 py-3 text-sand sm:flex-row sm:items-center sm:justify-between md:px-10">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-brass">
-          <Timer className="h-4 w-4" />
-          Fort Wayne Sports
-        </div>
+  const eventTitle = team
+    ? `Next ${team.nickname} Watch Party`
+    : "Next Fort Wayne Watch Party";
 
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-brass/30 bg-charcoal/98 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-6 py-4 md:px-10 md:py-5">
         {nextBroadcast && team && countdown ? (
-          <p className="text-sm text-sand/85 md:text-base">
-            Next {team.nickname} watch party:{" "}
-            <motion.span
-              key={pulseKey}
-              initial={reduceMotion ? false : { scale: 1.08, opacity: 0.7 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.35 }}
-              className="font-mono text-lg font-semibold text-brass"
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-8">
+            <div className="min-w-0 space-y-1">
+              <p className="font-[family-name:var(--font-germania)] text-xl leading-tight text-cream sm:text-2xl">
+                {eventTitle}
+              </p>
+              <p className="text-sm text-cream-muted">
+                {nextBroadcast.isAway ? "@" : "vs"} {nextBroadcast.opponent}
+              </p>
+            </div>
+
+            <motion.div
+              initial={reduceMotion ? false : { opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="shrink-0"
             >
-              {countdown.hours}h {countdown.minutes}m
-            </motion.span>{" "}
-            until taproom broadcast night.
-            <span className="mt-1 block text-xs text-sand/50 sm:ml-2 sm:mt-0 sm:inline">
-              {team.sport} · {nextBroadcast.isAway ? "@" : "vs"}{" "}
-              {nextBroadcast.opponent}
-            </span>
-          </p>
+              <CountdownDisplay
+                days={countdown.days}
+                hours={countdown.hours}
+                minutes={countdown.minutes}
+                pulseKey={pulseKey}
+              />
+            </motion.div>
+          </div>
         ) : (
-          <p className="text-sm text-sand/70">
-            TinCaps, Komets, and Fort Wayne FC schedules loading — check back
-            for the next downtown watch party.
+          <p className="text-center text-sm text-cream-muted md:text-left md:text-base">
+            Watch party schedule coming soon — TinCaps, Komets, and Fort Wayne
+            FC.
           </p>
         )}
       </div>

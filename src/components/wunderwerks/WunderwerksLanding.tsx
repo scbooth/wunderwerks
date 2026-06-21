@@ -27,7 +27,7 @@ export function WunderwerksLanding() {
 
   return (
     <div
-      className={`relative min-h-screen pb-24 transition-[filter] duration-300 ${
+      className={`relative min-h-screen pb-32 transition-[filter] duration-300 ${
         isProhibition ? "grayscale" : ""
       }`}
     >
@@ -75,18 +75,18 @@ export function WunderwerksLanding() {
       <footer className="relative z-10 border-t border-charcoal/10 bg-charcoal px-6 py-12 text-sand md:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="font-[family-name:var(--font-germania)] text-2xl text-brass">
+            <p className="font-[family-name:var(--font-germania)] text-2xl text-cream">
               Wunderwerks
             </p>
-            <div className="mt-4 flex items-start gap-2 text-sm text-sand/70">
+            <div className="mt-4 flex items-start gap-2 text-base text-cream-muted">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
               <span>1515 Wells Street, Fort Wayne, IN</span>
             </div>
-            <div className="mt-2 flex items-start gap-2 text-sm text-sand/70">
+            <div className="mt-3 flex items-start gap-2 text-base text-cream-muted">
               <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
               <span>Grand Opening · September 2026</span>
             </div>
-            <div className="mt-2 flex items-start gap-2 text-sm text-sand/70">
+            <div className="mt-3 flex items-start gap-2 text-base text-cream-muted">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
               <span>Taproom hours posted at opening · Thu–Sun planned</span>
             </div>
@@ -104,7 +104,7 @@ export function WunderwerksLanding() {
         </div>
       </footer>
 
-      <div className="fixed bottom-20 left-4 z-40 hidden lg:block">
+      <div className="fixed bottom-28 left-4 z-40 hidden lg:block">
         <ComplianceToggle
           mode={complianceMode}
           onChange={setComplianceMode}

@@ -3,6 +3,9 @@
 :root {
   --background: #f9f6f0;
   --foreground: #1a1a1a;
+  --cream: #f4efe6;
+  --cream-muted: #ddd6c8;
+  --cream-subtle: #c9c2b4;
 }
 
 @theme inline {
@@ -12,6 +15,9 @@
   --color-charcoal: #1a1a1a;
   --color-sand: #f9f6f0;
   --color-brass: #c5a059;
+  --color-cream: var(--cream);
+  --color-cream-muted: var(--cream-muted);
+  --color-cream-subtle: var(--cream-subtle);
   --font-sans: var(--font-inter);
   --font-display: var(--font-germania);
 }
@@ -30,6 +36,48 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Readable body copy on light sections */
+.text-prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: rgb(26 26 26 / 0.88);
+}
+
+@media (min-width: 768px) {
+  .text-prose {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+}
+
+/* Primary copy on dark backgrounds — warm off-white, not gray */
+.text-on-dark {
+  color: var(--cream);
+}
+
+.text-on-dark-muted {
+  color: var(--cream-muted);
+}
+
+.text-on-dark-subtle {
+  color: var(--cream-subtle);
+}
+
+/* Section labels — readable, not washed-out brass */
+.text-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream-muted);
+}
+
+.text-label-light {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(26 26 26 / 0.55);
 }
 
 .steel-grid {

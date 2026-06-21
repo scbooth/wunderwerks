@@ -40,14 +40,14 @@ export function EventsSection({ complianceMode }: EventsSectionProps) {
               whileHover={reduceMotion ? undefined : { y: -6 }}
               className="group rounded-sm border border-charcoal/15 bg-white p-6 shadow-sm transition-shadow hover:border-brass/30 hover:shadow-lg"
             >
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brass/30 bg-brass/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-forest">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brass/30 bg-brass/10 px-3 py-1 text-label-light">
                 <CalendarDays className="h-3.5 w-3.5" />
                 {event.schedule}
               </div>
               <h3 className="font-[family-name:var(--font-germania)] text-2xl text-charcoal">
                 {event.title}
               </h3>
-              <p className="mt-4 text-sm leading-7 text-charcoal/75 md:text-base">
+              <p className="mt-4 text-prose">
                 {event.hook}
               </p>
             </motion.article>

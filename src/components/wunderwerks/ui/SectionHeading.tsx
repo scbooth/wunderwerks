@@ -7,14 +7,18 @@ interface SectionHeadingProps {
   title: string;
   subtitle?: string;
   align?: "left" | "center";
+  /** light = sand/white sections; dark = charcoal sections */
+  tone?: "light" | "dark";
 }
 
 export function SectionHeading({
   title,
   subtitle,
   align = "left",
+  tone = "light",
 }: SectionHeadingProps) {
   const reduceMotion = useReducedMotion();
+  const isDark = tone === "dark";
 
   return (
     <motion.div
@@ -24,14 +28,22 @@ export function SectionHeading({
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={align === "center" ? "text-center" : "text-left"}
     >
-      <h2 className="font-[family-name:var(--font-germania)] text-4xl tracking-wide text-charcoal md:text-5xl">
+      <h2
+        className={`font-[family-name:var(--font-germania)] text-4xl tracking-wide md:text-5xl ${
+          isDark ? "text-cream" : "text-charcoal"
+        }`}
+      >
         {title}
       </h2>
       <div
         className={`mt-4 h-px w-24 bg-brass ${align === "center" ? "mx-auto" : ""}`}
       />
       {subtitle ? (
-        <p className="mt-4 max-w-2xl text-sm uppercase tracking-[0.2em] text-brass md:text-base">
+        <p
+          className={`mt-4 max-w-2xl text-xs uppercase tracking-[0.18em] md:text-sm ${
+            isDark ? "text-cream-muted" : "text-label-light"
+          } ${align === "center" ? "mx-auto" : ""}`}
+        >
           {subtitle}
         </p>
       ) : null}

@@ -45,10 +45,10 @@ export function MobileMenu({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 320, damping: 32 }}
-            className="fixed right-0 top-0 z-50 flex h-full w-[min(88vw,320px)] flex-col border-l border-brass/20 bg-charcoal px-6 py-8 text-sand lg:hidden"
+            className="fixed right-0 top-0 z-50 flex h-full w-[min(88vw,320px)] flex-col border-l border-brass/20 bg-charcoal px-6 py-8 text-cream lg:hidden"
           >
             <div className="mb-8 flex items-center justify-between">
-              <span className="font-[family-name:var(--font-germania)] text-2xl text-brass">
+              <span className="font-[family-name:var(--font-germania)] text-2xl text-cream">
                 Wunderwerks
               </span>
               <button
@@ -67,7 +67,7 @@ export function MobileMenu({
                   key={link.id}
                   type="button"
                   onClick={() => handleNav(link.id)}
-                  className="border-b border-sand/10 pb-3 text-left text-lg transition hover:text-brass"
+                  className="border-b border-cream-subtle/15 pb-3 text-left text-lg text-cream transition hover:text-brass"
                 >
                   {link.label}
                 </button>

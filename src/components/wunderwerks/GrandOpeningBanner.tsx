@@ -25,15 +25,15 @@ export function GrandOpeningBanner() {
       initial={reduceMotion ? false : { opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="fixed inset-x-0 top-[4.25rem] z-20 border-b border-brass/25 bg-forest"
+      className="fixed inset-x-0 top-[4.25rem] z-20 border-b border-brass/30 bg-forest"
     >
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-1 px-6 py-2.5 text-center sm:flex-row sm:gap-3 md:px-10">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-brass">
-          <CalendarDays className="h-3.5 w-3.5" />
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-1.5 px-6 py-3 text-center sm:flex-row sm:gap-4 md:px-10">
+        <div className="flex items-center gap-2 text-label text-cream">
+          <CalendarDays className="h-3.5 w-3.5 text-brass" />
           {grandOpening.headline}
         </div>
         {daysUntil !== null && daysUntil > 0 ? (
-          <span className="text-xs text-sand/75">
+          <span className="text-sm text-cream-muted">
             {daysUntil} day{daysUntil === 1 ? "" : "s"} until we open the
             taproom
           </span>

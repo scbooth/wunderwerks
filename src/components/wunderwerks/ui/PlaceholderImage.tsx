@@ -40,7 +40,7 @@ export function PlaceholderImage({
       <div className="absolute inset-0 bg-linear-to-t from-charcoal/70 via-transparent to-transparent" />
       <div className="relative flex h-full min-h-40 flex-col items-center justify-center gap-3 p-6 text-center">
         <Icon className="h-10 w-10 text-brass/80" strokeWidth={1.25} />
-        <p className="text-xs uppercase tracking-[0.25em] text-sand/70">
+        <p className="text-xs uppercase tracking-[0.2em] text-cream-muted">
           {label}
         </p>
       </div>
