@@ -14,7 +14,7 @@ export const fortWayneTeams: FortWayneTeam[] = [
     league: "Midwest League",
     venue: "Parkview Field",
     taproomHook:
-      "When the Caps are on the road, we pipe the broadcast into the taproom — baseball, Steins, and Wells Street on a Thursday.",
+      "When the Caps are on the road, we pipe the broadcast into the taproom — baseball, cold pints, and Wells Street on a Thursday.",
   },
   {
     id: "komets",
@@ -73,7 +73,7 @@ export const localHighlights: LocalHighlight[] = [
     id: "johnny-appleseed",
     name: "Johnny Appleseed Park",
     description:
-      "Home of the Johnny Appleseed Festival each fall — heritage, community, and the kind of local tradition we built this taproom for.",
+      "Home of the Johnny Appleseed Festival each fall — community, craft, and the kind of local tradition we built this taproom for.",
   },
 ];
 

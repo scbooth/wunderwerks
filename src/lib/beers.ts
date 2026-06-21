@@ -1,6 +1,22 @@
 import type { Beer } from "./types";
 
+export const beerPhilosophy =
+  "Traditional lagers, modern IPAs, and small-batch experimentation.";
+
+export const featuredBeer: Beer = {
+  id: "lumen",
+  name: "Lumen",
+  abv: 6.0,
+  style: "New England IPA",
+  description:
+    "Bright, juicy, and packed with tropical character. The beer that introduced many local drinkers to Johnny's brewing style and remains one of the brewery's most popular pours.",
+  glassware: "IPA tulip",
+  tag: "seasonal",
+  series: "flagship",
+};
+
 export const flagshipBeers: Beer[] = [
+  featuredBeer,
   {
     id: "slaughterhouse-hefe",
     name: "Slaughterhouse Hefe",
@@ -17,7 +33,7 @@ export const flagshipBeers: Beer[] = [
     abv: 5.8,
     description:
       "Smooth amber lager with toasted malt and a clean finish. Built for cool evenings on the Wells Street patio.",
-    glassware: "Stein or mug",
+    glassware: "Pint or mug",
     tag: "seasonal",
     series: "flagship",
   },
@@ -38,11 +54,11 @@ export const friendsFamilyBeers: Beer[] = [
     id: "kukers-shift-lager",
     name: "Kuker's Shift Lager",
     abv: 5.1,
-    style: "German-Style Lager",
+    style: "Crisp Lager",
     description:
       "Crisp, dependable, and always ready to put in a full day's work. Built for early mornings, long shifts, and the people who keep things running.",
     tagline: "Clock in. Pour out.",
-    glassware: "Pilsner or stein",
+    glassware: "Pilsner glass",
     tag: "light",
     series: "friends-family",
   },

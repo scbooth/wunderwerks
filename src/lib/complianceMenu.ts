@@ -1,13 +1,13 @@
 import type { ComplianceItem, DeliveryPartner } from "./types";
 
 export const corridorIntro =
-  "Under Indiana Code Title 7.1, we maintain a small house menu featuring a rich Beer Cheese Soup and hot smoked brats. However, we highly encourage our guests to support the legendary restaurants sharing the Wells Street Corridor with us. Order delivery directly to your stool from neighbors like Klemm's Kafe, Don Chava's, or the Original Big Eyed Fish.";
+  "Under Indiana Code Title 7.1, we keep a small house menu — beer cheese soup and hot smoked brats — so you can stay seated with a pint. We also encourage guests to support the legendary kitchens sharing the Wells Street Corridor. Order delivery directly to your stool from neighbors like Klemm's Kafe, Don Chava's, or the Original Big Eyed Fish.";
 
 export const complianceMenu: ComplianceItem[] = [
   {
-    id: "wunder-kase-soup",
+    id: "beer-cheese-soup",
     category: "House Menu",
-    name: "Wunder-Käse Soup",
+    name: "Beer Cheese Soup",
     description:
       "Rich beer cheese soup kept warm behind the bar and served with soft pretzel bites — our answer to Indiana's food-service requirement, done well.",
   },
@@ -46,4 +46,4 @@ export const deliveryPartners: DeliveryPartner[] = [
 ];
 
 export const corridorBlurb =
-  "The Wells Street Corridor is home to some of Fort Wayne's most beloved kitchens. Pull up a stool, order in, and eat local while we keep the lagers flowing.";
+  "The Wells Street Corridor is home to some of Fort Wayne's most beloved kitchens. Pull up a stool, order in, and eat local while we keep the taps flowing.";

@@ -48,7 +48,7 @@ export function MobileMenu({
             className="fixed right-0 top-0 z-50 flex h-full w-[min(88vw,320px)] flex-col border-l border-brass/20 bg-charcoal px-6 py-8 text-cream lg:hidden"
           >
             <div className="mb-8 flex items-center justify-between">
-              <span className="font-[family-name:var(--font-germania)] text-2xl text-cream">
+              <span className="font-display text-2xl font-semibold text-cream">
                 Wunderwerks
               </span>
               <button

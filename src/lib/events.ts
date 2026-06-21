@@ -2,27 +2,33 @@ import type { BreweryEvent } from "./types";
 
 export const events: BreweryEvent[] = [
   {
-    id: "tabletop-and-taps",
-    title: "Tabletop & Taps",
-    schedule: "Every Wednesday",
-    hook: "Bring your favorite board games or pull one from our curated house shelf of indie strategy games. A mid-week staple for those who appreciate good strategy, quiet competition, and fresh lager.",
-  },
-  {
-    id: "fort-wayne-sports",
-    title: "Fort Wayne Sports Broadcasts",
-    schedule: "Thirsty Thursday · TinCaps, Komets & Fort Wayne FC",
-    hook: "When our hometown teams are on — TinCaps baseball at Parkview Field, Komets hockey at the Coliseum, or Fort Wayne FC at Lutheran Health Field — we tune in at the taproom. Away-day radio feeds, home-game screens, Steins raised for Fort Wayne.",
-  },
-  {
-    id: "slab-and-stein",
-    title: "Slab & Stein BYO Vinyl Night",
+    id: "analog-night",
+    title: "Analog Night",
     schedule: "Every Saturday",
-    hook: "A night dedicated to analog sound and local collectors. Bring your favorite vinyl records, sign up on our clipboard at the bar, and let us play a side of your album over the house speakers while you enjoy a fresh pour.",
+    hook: "A standing taproom tradition for vinyl collectors. Bring a record, sign the clipboard at the bar, and take a turn on the house speakers. Not a scheduled show — just a regular night for people who like their beer fresh and their music on wax.",
   },
   {
-    id: "food-truck-spotlights",
-    title: "Food Truck Spotlights",
-    schedule: "Friday & Saturday Nights",
-    hook: "We're brewers, not chefs. Every Friday and Saturday night, we share our industrial courtyard with Fort Wayne's best local food trucks to bring you a rotating lineup of great street food paired with our lagers.",
+    id: "trail-and-tap",
+    title: "Trail & Tap",
+    schedule: "First Sunday each month",
+    hook: "Meet at the Rivergreenway, log a few miles together, and finish back at the bar. A simple club for neighbors who earn their pint before they order one.",
+  },
+  {
+    id: "quiet-pints",
+    title: "Quiet Pints Reading Society",
+    schedule: "Third Tuesday each month",
+    hook: "One book, one month, no microphones. Read at your own pace and show up ready to talk over a pint — more reading society than event series.",
+  },
+  {
+    id: "neighborhood-league",
+    title: "Neighborhood League",
+    schedule: "Every Wednesday",
+    hook: "Pull a board game from the house shelf or bring your own. Same faces, rotating tables, quiet competition — the mid-week fixture for Wells Street regulars.",
+  },
+  {
+    id: "fort-wayne-radio-club",
+    title: "Fort Wayne Radio Club",
+    schedule: "Thirsty Thursday · TinCaps, Komets & Fort Wayne FC seasons",
+    hook: "When hometown teams are on, the taproom becomes the neighborhood watch party. Away feeds on the radio, home games on the screens — cold pints, loyal crowd, same city pride.",
   },
 ];

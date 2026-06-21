@@ -19,14 +19,14 @@ export function Header({
   onComplianceChange,
 }: HeaderProps) {
   return (
-    <header className="fixed inset-x-0 top-0 z-30 border-b border-brass/20 bg-charcoal/95 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-30 border-b border-brass/15 bg-charcoal/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
         <button
           type="button"
           onClick={() => scrollToSection("hero")}
           className="group text-left"
         >
-          <span className="font-[family-name:var(--font-germania)] text-2xl tracking-wide text-cream md:text-3xl">
+          <span className="font-display text-2xl font-semibold text-cream md:text-3xl">
             Wunderwerks
           </span>
           <span className="mt-1 block h-0.5 w-0 bg-brass transition-all duration-300 group-hover:w-full" />

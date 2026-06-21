@@ -7,6 +7,7 @@ import type { ComplianceMode, TapFilter } from "@/lib/types";
 import { ComplianceToggle } from "./ComplianceToggle";
 import { ComplianceMenu } from "./ComplianceMenu";
 import { EventsSection } from "./EventsSection";
+import { FeaturedBeer } from "./FeaturedBeer";
 import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
 import { MobileMenu } from "./MobileMenu";
@@ -59,6 +60,7 @@ export function WunderwerksLanding() {
       <main className="relative z-10">
         <HeroSection />
         <StorySection />
+        <FeaturedBeer complianceMode={complianceMode} />
         <ComplianceMenu complianceMode={complianceMode} />
         <TapList
           activeFilter={activeTapFilter}
@@ -72,8 +74,11 @@ export function WunderwerksLanding() {
       <footer className="relative z-10 border-t border-charcoal/10 bg-charcoal px-6 py-12 text-sand md:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="font-[family-name:var(--font-germania)] text-2xl text-cream">
+            <p className="font-display text-2xl font-semibold text-cream">
               Wunderwerks
+            </p>
+            <p className="mt-2 text-sm text-cream-muted">
+              Neighborhood brewery · Wells Street, Fort Wayne
             </p>
             <div className="mt-4 flex items-start gap-2 text-base text-cream-muted">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brass" />

@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { Beer } from "lucide-react";
-import { flagshipBeers } from "@/lib/beers";
+import { beerPhilosophy, flagshipBeers } from "@/lib/beers";
 import type { ComplianceMode, TapFilter } from "@/lib/types";
 import { FriendsFamilySeries } from "./FriendsFamilySeries";
 import { FilterChip } from "./ui/FilterChip";
@@ -45,7 +45,7 @@ export function TapList({
     <SectionShell id="tap-list" className="relative bg-charcoal text-on-dark">
       {isProhibition ? (
         <div className="mx-auto flex min-h-[280px] max-w-7xl items-center justify-center px-6 text-center">
-          <p className="font-[family-name:var(--font-germania)] text-3xl text-brass md:text-4xl">
+          <p className="font-display text-3xl font-semibold text-brass md:text-4xl">
             Legally compliant. Emotionally devastated.
           </p>
         </div>
@@ -53,7 +53,7 @@ export function TapList({
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           title="On Tap Today"
-          subtitle="Slaughterhouse Hefe · Cleaver Amber · Compliance Pilsner"
+          subtitle={beerPhilosophy}
           tone="dark"
         />
 
@@ -112,14 +112,19 @@ export function TapList({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.25 }}
-                className="rounded-sm border border-brass/30 bg-linear-to-br from-forest/30 to-charcoal p-8 shadow-xl"
+                className="rounded-sm border border-brass/25 bg-linear-to-br from-forest/25 to-charcoal p-8 shadow-lg"
               >
                 <div className="mb-6 flex items-start justify-between gap-4">
                   <div>
                     <p className="text-label text-cream-muted">Selected Tap</p>
-                    <h3 className="mt-2 font-[family-name:var(--font-germania)] text-3xl text-cream md:text-4xl">
+                    <h3 className="font-display mt-2 text-3xl font-semibold text-cream md:text-4xl">
                       {selectedBeer.name}
                     </h3>
+                    {selectedBeer.style ? (
+                      <p className="mt-2 text-sm text-cream-muted">
+                        {selectedBeer.style}
+                      </p>
+                    ) : null}
                   </div>
                   <Beer className="h-8 w-8 shrink-0 text-brass" />
                 </div>

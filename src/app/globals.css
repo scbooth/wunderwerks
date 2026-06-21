@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9f6f0;
-  --foreground: #1a1a1a;
-  --cream: #f4efe6;
-  --cream-muted: #ddd6c8;
-  --cream-subtle: #c9c2b4;
+  --background: #f5f0e6;
+  --foreground: #2c2925;
+  --cream: #ede6d8;
+  --cream-muted: #d4cbb8;
+  --cream-subtle: #b8ae9c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-forest: #1b3f22;
-  --color-charcoal: #1a1a1a;
-  --color-sand: #f9f6f0;
-  --color-brass: #c5a059;
+  --color-forest: #2d5034;
+  --color-charcoal: #2c2925;
+  --color-sand: #f5f0e6;
+  --color-brass: #b8956a;
+  --color-brick: #8b5e4a;
   --color-cream: var(--cream);
   --color-cream-muted: var(--cream-muted);
   --color-cream-subtle: var(--cream-subtle);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-germania);
 }
 
 html {
@@ -38,11 +38,16 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
 /* Readable body copy on light sections */
 .text-prose {
   font-size: 1.0625rem;
   line-height: 1.75;
-  color: rgb(26 26 26 / 0.88);
+  color: rgb(44 41 37 / 0.88);
 }
 
 @media (min-width: 768px) {
@@ -77,18 +82,27 @@ body {
   font-size: 0.6875rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgb(26 26 26 / 0.55);
+  color: rgb(44 41 37 / 0.55);
 }
 
 .steel-grid {
   background-image:
-    linear-gradient(rgba(197, 160, 89, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(197, 160, 89, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(184, 149, 106, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 149, 106, 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 .brass-glow {
   box-shadow:
-    0 0 0 1px rgba(197, 160, 89, 0.35),
-    0 0 32px rgba(197, 160, 89, 0.18);
+    0 0 0 1px rgba(184, 149, 106, 0.28),
+    0 0 24px rgba(184, 149, 106, 0.12);
+}
+
+.warm-gradient-dark {
+  background: linear-gradient(
+    145deg,
+    #2c2925 0%,
+    #3a3530 45%,
+    rgb(45 80 52 / 0.35) 100%
+  );
 }

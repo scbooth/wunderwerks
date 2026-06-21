@@ -29,7 +29,7 @@ export function SectionHeading({
       className={align === "center" ? "text-center" : "text-left"}
     >
       <h2
-        className={`font-[family-name:var(--font-germania)] text-4xl tracking-wide md:text-5xl ${
+        className={`font-display text-4xl font-semibold md:text-5xl ${
           isDark ? "text-cream" : "text-charcoal"
         }`}
       >
