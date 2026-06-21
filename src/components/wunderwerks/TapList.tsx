@@ -3,8 +3,9 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { Beer } from "lucide-react";
-import { beers } from "@/lib/beers";
+import { flagshipBeers } from "@/lib/beers";
 import type { ComplianceMode, TapFilter } from "@/lib/types";
+import { FriendsFamilySeries } from "./FriendsFamilySeries";
 import { FilterChip } from "./ui/FilterChip";
 import { SectionHeading, SectionShell } from "./ui/SectionHeading";
 
@@ -29,16 +30,16 @@ export function TapList({
   const isProhibition = complianceMode === "prohibition";
 
   const filteredBeers = useMemo(() => {
-    if (activeFilter === "all") return beers;
-    return beers.filter((beer) => beer.tag === activeFilter);
+    if (activeFilter === "all") return flagshipBeers;
+    return flagshipBeers.filter((beer) => beer.tag === activeFilter);
   }, [activeFilter]);
 
-  const [selectedId, setSelectedId] = useState(beers[0]?.id ?? "");
+  const [selectedId, setSelectedId] = useState(flagshipBeers[0]?.id ?? "");
 
   const selectedBeer =
     filteredBeers.find((beer) => beer.id === selectedId) ??
     filteredBeers[0] ??
-    beers[0];
+    flagshipBeers[0];
 
   return (
     <SectionShell id="tap-list" className="relative bg-charcoal text-on-dark">
@@ -67,8 +68,8 @@ export function TapList({
                 onFilterChange(filter.id);
                 const nextBeer =
                   filter.id === "all"
-                    ? beers[0]
-                    : beers.find((beer) => beer.tag === filter.id);
+                    ? flagshipBeers[0]
+                    : flagshipBeers.find((beer) => beer.tag === filter.id);
                 if (nextBeer) setSelectedId(nextBeer.id);
               }}
             />
@@ -141,6 +142,8 @@ export function TapList({
             ) : null}
           </AnimatePresence>
         </div>
+
+        <FriendsFamilySeries />
       </div>
       )}
     </SectionShell>

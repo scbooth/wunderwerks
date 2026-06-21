@@ -4,6 +4,8 @@ export type TapFilter = "all" | "light" | "dark" | "seasonal";
 
 export type BeerTag = "light" | "dark" | "seasonal";
 
+export type BeerSeries = "flagship" | "friends-family";
+
 export type FortWayneTeamId = "tincaps" | "komets" | "fwfc";
 
 export interface Beer {
@@ -13,6 +15,9 @@ export interface Beer {
   description: string;
   glassware: string;
   tag: BeerTag;
+  series: BeerSeries;
+  style?: string;
+  tagline?: string;
 }
 
 export interface ComplianceItem {
